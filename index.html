@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		body{background-image: url("QQ图片20220302101645.jpg");
+			background-repeat: no-repeat;
+			background-size:100% ;
+			padding-bottom: 150%
+			
+			}		
+    </style>
+
+</head>
+
+<script>
+	setInterval("fun(show_time)",0.11);
+	function fun(timeID){ 
+		var date = new Date();  //创建对象  
+		var y = date.getFullYear();     //获取年份  
+		var m =date.getMonth()+1;   //获取月份  返回0-11  
+		var d = date.getDate(); // 获取日  
+		var w = date.getDay();   //获取星期几  返回0-6   (0=星期天) 
+		var ww = ' 星期'+'日一二三四五六'.charAt(new Date().getDay()) ;//星期几
+		var h = date.getHours();  //时
+		var minute = date.getMinutes()  //分
+		var s = date.getSeconds(); //秒
+		var sss = date.getMilliseconds() ; //毫秒
+		if(m<10){
+			m = "0"+m;
+		}
+		if(d<10){
+			d = "0"+d;
+		}
+		if(h<10){
+			h = "0"+h;
+		}
+		
+		
+		if(minute<10){
+			minute = "0"+minute;
+		}
+		
+		
+		if(s<10){
+			s = "0"+s;
+		}
+		
+		
+		sss = sss%100;
+		
+		document.getElementById(timeID.id).innerHTML 
+			= " "+m+"-"+d+"   "+h+":"+minute+":"+s+":"+sss;
+
+ 
+ 
+}</script>
+<style>
+	.container{
+		margin-top: 71%;
+		margin-left: 25%;
+		text-align: left;
+		color:azure;
+		font-size: 25px;
+		font:italic;		
+			
+			
+		}
+</style>
+<body >
+<div class="container" id="time">
+	
+	<span id= "show_time">here is time</span>
+	
+</div>
+</body>
+</html>
