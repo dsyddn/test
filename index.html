@@ -48,7 +48,8 @@
 		}
 		
 		
-		sss = sss%100;
+		sss =sss/10;
+		sss = Math.floor(sss);
 		
 		document.getElementById(timeID.id).innerHTML 
 			= " "+m+"-"+d+"   "+h+":"+minute+":"+s+":"+sss;
@@ -58,11 +59,11 @@
 }</script>
 <style>
 	.container{
-		margin-top: 71%;
-		margin-left: 25%;
+		margin-top: 70%;
+		margin-left: 27%;
 		text-align: left;
 		color:azure;
-		font-size: 45px;
+		font-size: 60px;
 		font:italic;		
 			
 			
